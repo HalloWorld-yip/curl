@@ -36,17 +36,6 @@ Current flaws in the curl CMake build
    - Rebuilds test files too eagerly, but still can't run the tests
 
 
-Important notice
-==================
-   If you got your curl sources from a distribution tarball, make sure to
-   delete the generic 'include/curl/curlbuild.h' file that comes with it:
-       rm -f curl/include/curl/curlbuild.h
-
-   The purpose of this file is to provide reasonable definitions for systems
-   where autoconfiguration is not available. CMake will create its own
-   version of this file in its build directory. If the "generic" version
-   is not deleted, weird build errors may occur on some systems.
-
 Command Line CMake
 ==================
    A CMake build of curl is similar to the autotools build of curl. It
